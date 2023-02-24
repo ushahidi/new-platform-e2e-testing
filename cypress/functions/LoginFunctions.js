@@ -8,6 +8,7 @@ class LoginFunctions {
   }
 
   type_email(email) {
+    cy.wait(1000);
     cy.get(LoginLocators.emailField).type(email);
   }
 
@@ -27,6 +28,7 @@ class LoginFunctions {
     cy.get("#onboarding-button-activity").click();
     cy.get("#onboarding-button-collections").click();
     cy.get("#onboarding-button-clapper").click();
+    cy.get('[data-qa="button-decline-cookies"]').click();
   }
 
   login_as_admin() {
