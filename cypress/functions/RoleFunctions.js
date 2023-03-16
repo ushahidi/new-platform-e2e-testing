@@ -14,12 +14,28 @@ class RoleFunctions {
     cy.get(RoleLocators.addSaveBtn).click();
   }
 
-  verify_role() {}
+  verify_role_exist() {
+    cy.get(RoleLocators.createdRoleBtn).should("exist");
+  }
 
+  delete_role() {
+    cy.get(RoleLocators.createdRoleBtn).click();
+    cy.wait(1000);
+    cy.get(RoleLocators.deleteRoleBtn).click();
+    cy.get(RoleLocators.deleteConfirmBtn).click();
+  }
+
+  verify_role_deleted() {
+    cy.get(RoleLocators.createdRoleBtn).should("not.exist");
+  }
   add_and_verify_role() {
     this.open_roles_page();
     this.add_role("Auto Role", "An automated description for automated role");
-    this.verify_role();
+    this.verify_role_exist();
+  }
+  delete_role_and_verify_deletion() {
+    this.delete_role();
+    this.verify_role_deleted();
   }
 }
 
