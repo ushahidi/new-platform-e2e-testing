@@ -8,7 +8,8 @@ describe("Automated Tests for Users", () => {
   before(() => {
     loginFunctions.login_as_admin();
   });
-  it("Adds a User", () => {
-    userFunctions.navigate_and_add_user();
+  it("Adds then Deletes User", () => {
+    userFunctions.add_user();
+    userFunctions.delete_user();
   });
 });
