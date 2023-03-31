@@ -17,88 +17,108 @@ class SurveyFunctions {
   add_survey_fields_steps() {
     //Survey Main Title
     cy.get(
-      ".mat-focus-indicator.field-item__control.mat-icon-button.mat-button-base"
+      // ".mat-focus-indicator.field-item__control.mat-icon-button.mat-button-base"
+      ".mzima-button.mzima-button--gray.mzima-button--clear.mzima-button--medium.mzima-button--block.mzima-button--icon-only.ng-star-inserted"
     )
       .eq(0)
       .click();
-    cy.get("input[placeholder='Name this field']").type("Automated");
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
     cy.contains(
-      ".mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary",
+      // ".mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary",
+      ".mzima-button.mzima-button--primary.mzima-button--solid.mzima-button--medium.mzima-button--block.ng-star-inserted",
       "Update"
     ).click();
 
     //Survey Main Description
     cy.get(
-      ".mat-focus-indicator.field-item__control.mat-icon-button.mat-button-base"
+      // ".mat-focus-indicator.field-item__control.mat-icon-button.mat-button-base"
+      ".mzima-button.mzima-button--gray.mzima-button--clear.mzima-button--medium.mzima-button--block.mzima-button--icon-only.ng-star-inserted"
     )
       .eq(1)
       .click();
-    cy.get("input[placeholder='Name this field']").type("Automated");
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
     cy.contains(
-      ".mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary",
+      // ".mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary",
+      ".mzima-button.mzima-button--primary.mzima-button--solid.mzima-button--medium.mzima-button--block.ng-star-inserted",
       "Update"
     ).click();
 
     //click Add field button to open list of fields
-    cy.contains(
-      ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-      "Add field"
+    cy.get(
+      ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
     ).click();
 
     //short text field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Short text").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+    cy.contains(".mat-ripple.list-item.ng-star-inserted", "Short text").click();
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
+    cy.contains("Save").click();
+
     //long text field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Long text").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+    cy.get(
+      ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
+    ).click();
+
+    cy.contains(".mat-ripple.list-item.ng-star-inserted", "Long text").click();
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
+    cy.contains("Save").click();
+
     //decimal field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Number (Decimal)").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+    cy.get(
+      ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
+    ).click();
+    cy.contains(
+      ".mat-ripple.list-item.ng-star-inserted",
+      "Number (Decimal)"
+    ).click();
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
+    cy.contains("Save").click();
+
     //integer field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Number (Integer)").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+    cy.get(
+      ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
+    ).click();
+    cy.contains(
+      ".mat-ripple.list-item.ng-star-inserted",
+      "Number (Integer)"
+    ).click();
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
+    cy.contains("Save").click();
+
     //location field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Location").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+    cy.get(
+      ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
+    ).click();
+    cy.contains(".mat-ripple.list-item.ng-star-inserted", "Location").click();
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
+    cy.contains("Save").click();
+
     //date field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Date").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+    cy.get(
+      ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
+    ).click();
+    cy.contains(".mat-ripple.list-item.ng-star-inserted", "Date").click();
+    cy.get("input[placeholder='Name this field']").type(" - Automated");
+    cy.contains("Save").click();
+
     //dateTime field
-    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Date & Time").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
+    // cy.get(
+    //   ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
     // ).click();
+    // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Date & Time").click();
+
     //select field
+    // cy.get(
+    //   ".mat-tab-body-content > .form-head-panel > mzima-client-button > .mzima-button"
+    // ).click();
     // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Select").click();
     // cy.contains(
     //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
     //   "Add field"
     // ).click();
+
     //radio field
     // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Radio Button(s)").click();
-    // cy.contains(
-    //   ".mat-focus-indicator.mat-stroked-button.mat-button-base",
-    //   "Add field"
-    // ).click();
+
     //checkbox field
     // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Checkbox(es)").click();
     // cy.contains(
@@ -133,7 +153,13 @@ class SurveyFunctions {
     // cy.contains(".mat-ripple.list-item.ng-star-inserted", "Categories").click();
   }
 
-  complete_add_survey_steps() {}
+  complete_add_survey_steps() {
+    cy.get(".form-controls-panel > :nth-child(2) > .mzima-button").click();
+  }
+
+  verify_created_survey_exists() {
+    
+  }
 }
 
 export default SurveyFunctions;

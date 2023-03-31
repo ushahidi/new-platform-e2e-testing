@@ -13,5 +13,6 @@ describe("Automated Tests for Surveys", () => {
     surveyFunctions.open_survey_creation_page_steps();
     surveyFunctions.add_survey_details_steps();
     surveyFunctions.add_survey_fields_steps();
+    surveyFunctions.complete_add_survey_steps();
   });
 });
