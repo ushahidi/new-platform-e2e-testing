@@ -23,7 +23,7 @@ Each file is put into its own respectively named folder, and each folder prefixe
 Each main test file has two associated files:
 
 ### Locator file
-Named to match the associated test file. Most elements on the platform have custom attributes added to them in the format data-qa="element_name"
+Named to match the associated test file. Most elements on the platform have custom attributes added to them in the format `data-qa="element_name"`
 This is then declared in the locators file and referred to from the test files.
 Locators folder has files that have custom element selectors. Locator files sit here.
 
