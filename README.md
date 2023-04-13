@@ -27,7 +27,7 @@ Named to match the associated test file. Most elements on the platform have cust
 This is then declared in the locators file and referred to from the test files.
 Locators folder has files that have custom element selectors. Locator files sit here.
 
-### Functions file
+### Functions files
 Functions folder has the core functions for the tests. The main test file calls from from the functions file located in the Functions folder.
 
 ## Getting Set Up
@@ -55,4 +55,4 @@ The site under test runs on a remote staging server - https://mzima.staging.ush.
 
 Refer to the [CONTRIBUTING.md]() guide for details.
 
-[Code of Conduct] (https://docs.ushahidi.com/platform-developer-documentation/code-of-conduct)
+[Code of Conduct](https://docs.ushahidi.com/platform-developer-documentation/code-of-conduct)
