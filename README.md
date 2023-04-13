@@ -22,13 +22,13 @@ Each file is put into its own respectively named folder, and each folder prefixe
 
 Each main test file has two associated files:
 
-### Locator files
+### Locator file
 Named to match the associated test file. Most elements on the platform have custom attributes added to them in the format data-qa="element_name"
 This is then declared in the locators file and referred to from the test files.
 Locators folder has files that have custom element selectors. Locator files sit here.
 
-### Functions files
-Functions folder has the core functions for the tests. The main test file calls from from the functions file located in the Functions folder.
+### Functions file
+Named to match the associated test file. Functions file has the core functions for the tests. The main test file calls from from the functions file located in the Functions folder.
 
 ## Getting Set Up
 
