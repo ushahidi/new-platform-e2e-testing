@@ -154,7 +154,13 @@ class SurveyFunctions {
     cy.get(SurveyLocators.completeSurveyBtn).click();
   }
 
-  verify_created_survey_exists() {}
+  verify_created_survey_exists() {
+    // cy.get(SurveyLocators.createdSurveyBtn).should('exist')
+    cy.contains(
+      ".mat-ripple.type-item.ng-star-inserted",
+      "Automated Survey"
+    ).should("exist");
+  }
 }
 
 export default SurveyFunctions;
