@@ -40,17 +40,17 @@ class SurveyFunctions {
     cy.get(SurveyLocators.longNameField).type(" - Automated");
     cy.get(SurveyLocators.saveBtn).click();
 
-    // //decimal field
-    // cy.get(SurveyLocators.addFieldBtn).click();
-    // cy.get(SurveyLocators.decimalTxtBtn).click();
-    // cy.get(SurveyLocators.decimalNameField).type(" - Automated");
-    // cy.get(SurveyLocators.saveBtn).click();
+    //decimal field
+    cy.get(SurveyLocators.addFieldBtn).click();
+    cy.get(SurveyLocators.decimalTxtBtn).click();
+    cy.get(SurveyLocators.decimalNameField).type(" - Automated");
+    cy.get(SurveyLocators.saveBtn).click();
 
-    // // integer field
-    // cy.get(SurveyLocators.addFieldBtn).click();
-    // cy.get(SurveyLocators.integerTxtBtn).click();
-    // cy.get(SurveyLocators.integerNameField).type(" - Automated");
-    // cy.get(SurveyLocators.saveBtn).click();
+    // integer field
+    cy.get(SurveyLocators.addFieldBtn).click();
+    cy.get(SurveyLocators.integerTxtBtn).click();
+    cy.get(SurveyLocators.integerNameField).type(" - Automated");
+    cy.get(SurveyLocators.saveBtn).click();
 
     //location field
     cy.get(SurveyLocators.addFieldBtn).click();
