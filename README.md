@@ -33,23 +33,32 @@ Named to match the associated test file. Functions file has the core functions f
 ## Getting Set Up
 
 ### Installation
-The tests run in cypress. To install cypress
+Requires node v18+
 
 ```bash
-npm install cypress
-```
+npm install
+``` 
+will install the current cypress version the tests are written and running in. 
 
 Check out [Cypress.io](cypress.io) for more information
 
 ### Running the tests
 Once cypress is set up and running, simply open the runner and click on individual tests to run.
-Tests can be run in headless mode in the terminal using the default command
+Tests can be run in headless mode in the terminal using the default command:
 
 ```bash
 npx cypress run
 ```
 
+To launch the cypress test runner, use the command:
+```bash
+npm run cy:open
+```
+This will launch the test runner laying out available tests, and individual tests can be run on a browser on a visual interface.
+
 The site under test runs on a remote staging server - https://mzima.staging.ush.zone/
+
+The tests would require logging into the site. User credentials are declared in the cypress.env.json file. Contact the site owners for admin credentials to run the tests.
 
 ## Contributing
 
