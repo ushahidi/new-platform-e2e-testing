@@ -10,18 +10,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node14.16.0-chrome89-ff86
+   # container: cypress/browsers:node14.16.0-chrome89-ff86
     timeout-minutes: 30
 
-    # strategy:
+   # strategy:
     #  fail-fast: false
       # limit to 1 in parallel because we are running against the same platform deployment
       # max-parallel: 1
     #  matrix:
     #    containers: [1, 2, 3]
-    #    browser:
-    #      - chrome
-          # - firefox   # browser not found on the image?
+    # browser:
+     #     - chrome
+      #     - firefox   # browser not found on the image?
 
     steps:
     - uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
       uses: cypress-io/github-action@v4
 
       with:
-        browser: "${{matrix.browser}}"
+        browser: chrome
         install-command: npm install
         record: false
         parallel: false
