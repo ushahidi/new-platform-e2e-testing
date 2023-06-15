@@ -32,8 +32,8 @@ jobs:
       with:
         browser: "${{matrix.browser}}"
         install-command: npm install
-        record: true
-        parallel: true
+      #  record: true
+      #  parallel: true
         start: npm start
         
       env:
