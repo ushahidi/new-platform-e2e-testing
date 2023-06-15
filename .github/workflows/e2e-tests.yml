@@ -2,7 +2,6 @@ name: Tests
 
 on:
 - push
-- pull_request
 
 # env:
 #   TARGET_URL: "https://mzima.staging.ush.zone"
