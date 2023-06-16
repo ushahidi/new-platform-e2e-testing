@@ -1,7 +1,7 @@
 name: Tests
 
 on:
-- push
+  - push
 
 jobs:
   test:
@@ -9,22 +9,22 @@ jobs:
     timeout-minutes: 30
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Cypress run
-      uses: cypress-io/github-action@v5
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
 
-      with:
-        browser: chrome
-        install-command: npm install
-        start: npm start
-        
-      env:
+        with:
+          browser: chrome
+          install-command: npm install
+          start: npm start
+
+        env:
           CYPRESS_ush_admin_email: "${{secrets.ush_admin_email}}"
           CYPRESS_ush_admin_pwd: "${{secrets.ush_admin_pwd}}"
           CYPRESS_ush_user_name: "${{secrets.ush_user_name}}"
           CYPRESS_ush_user_email: "${{secrets.ush_user_email}}"
           CYPRESS_ush_user_pwd: "${{secrets.ush_user_pwd}}"
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEBUG: "cypress:*"
