@@ -29,4 +29,3 @@ jobs:
           CYPRESS_ush_user_email: "${{secrets.ush_user_email}}"
           CYPRESS_ush_user_pwd: "${{secrets.ush_user_pwd}}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEBUG: "cypress:*"
