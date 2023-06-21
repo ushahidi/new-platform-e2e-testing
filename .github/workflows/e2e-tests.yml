@@ -1,4 +1,4 @@
-name: Tests
+name: Cypress Tests
 
 on:
   - push
@@ -13,14 +13,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Cypress run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v4
 
         with:
           browser: chrome
           install-command: npm install
           start: npm start
+          record: true
 
         env:
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
           CYPRESS_ush_admin_email: "${{secrets.ush_admin_email}}"
           CYPRESS_ush_admin_pwd: "${{secrets.ush_admin_pwd}}"
           CYPRESS_ush_user_name: "${{secrets.ush_user_name}}"
