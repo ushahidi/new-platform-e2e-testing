@@ -1,4 +1,4 @@
 node_modules/
-screenshots/
-videos/
 .DS_Store
+*.mp4
+*.png
